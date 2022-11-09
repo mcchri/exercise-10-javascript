@@ -1,3 +1,5 @@
+
+
 let square = 5;
 let star = "*";
 
@@ -43,30 +45,48 @@ for(i=0;i<columns2;i++){
 	document.write("<br>");
 }
 
-let rows3 = 40;
-let columns3 = 20;
-document.write("<br>");
-for(i=0;i<columns3;i++){
-	if(i==1 || i==columns3-1){
-		for(let q=0;q<rows3;q++){
-			document.write(star);
-			
-		}
-		
-	}
-	if(i>1 && i<columns3-1){
-		for(let s=0;s<=rows3;s++){
-			
-			if(s==1 || s==rows3){
-				document.write(star);
-				
-			}else if(s>1 && s<=rows3){
-				
-				document.write("&nbsp&nbsp");
-		    }else if(s==i){
-				document.write(star);
-			}}
-	}
-	document.write("<br>");
-}
 
+
+
+
+let sqr = 7;
+for( let col = 1; col<=sqr;col++){
+if(col == 1 || col == sqr){	
+for( let row = 1; row<=sqr;row++){
+	document.write(star);
+}
+}else{
+	for( let row = 1; row<=sqr;row++){
+		if(row == 1 || row == sqr){
+			document.write(star);
+		}else if(row == col){
+			document.write(star);
+		}else if(row + col -1 == sqr){
+			document.write(star);
+		}
+		else{
+			document.write("&nbsp&nbsp");
+		}
+
+	}
+}
+document.write("<br>");
+}
+document.write("<br>");
+
+let rohm = 5;
+let r2 = rohm;
+for(let col = 1;col<=rohm;col++){
+while(r2 > 0){
+	for(let r = r2-1; r>0;r--){
+		if(r2 >= 0){
+		document.write("&nbsp&nbsp");
+		}
+	}
+	r2--;
+
+for(let row = 1; row<=rohm;row++){
+	document.write(star);
+}
+document.write("<br>");
+}}
